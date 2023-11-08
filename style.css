@@ -153,8 +153,6 @@ main {
 	align-items: center;
 	justify-content: end;
 	height: 250px;
-	
-	
 }
 
 .pokemon {
@@ -193,12 +191,19 @@ main {
 	margin-top: 20px;
 }
 
+.typediv {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 .pokemon-type {
 	font-size: 14px;
 	font-weight: 600;
 	color: #14181e;
 	padding: 10px 10px;
 	border-radius: 10px;
+	margin-left: 10px;
 	position: relative;
 	top: -40px;
 }
@@ -257,6 +262,30 @@ main {
 
 .ghost-type {
 	background-color: var(--ghost);
+}
+
+.ice-type {
+	background-color: var(--ice);
+}
+
+.dragon-type {
+	background-color: var(--dragon);
+}
+
+.ghost-type {
+	background-color: var(--ghost);
+}
+
+.dark-type {
+	background-color: var(--dark);
+}
+
+.flying-type {
+	background-color: var(--flying);
+}
+
+.steel-type {
+	background-color: var(--steel);
 }
 
 .hidden {

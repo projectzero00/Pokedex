@@ -21,15 +21,26 @@ const createDom = (pokemon) => {
 	nameElement.classList.add("pokemon-name");
 	nameElement.textContent = pokemon.name;
 
+    const typediv = document.createElement("div");
+    typediv.classList.add("typediv");
 	const typeElement = document.createElement("p");
 	typeElement.classList.add("pokemon-type");
 	typeElement.classList.add(`${pokemon.type}-type`);
 	typeElement.textContent = pokemon.type.toUpperCase();
+    typediv.appendChild(typeElement);
+
+    if (pokemon.type2) {
+        const typeElement2 = document.createElement("p");
+        typeElement2.classList.add("pokemon-type");
+        typeElement2.classList.add(`${pokemon.type2}-type`);
+        typeElement2.textContent = pokemon.type2.toUpperCase();
+        typediv.appendChild(typeElement2);
+    }
 
 	pokemonElement.appendChild(imgElement);
 	pokemonElement.appendChild(numberElement);
 	pokemonElement.appendChild(nameElement);
-	pokemonElement.appendChild(typeElement);
+	pokemonElement.appendChild(typediv);
 
 	pokemonContainer.appendChild(pokemonElement);
 	fragment.appendChild(pokemonContainer);

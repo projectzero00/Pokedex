@@ -29,6 +29,7 @@ export const getPokemons = async () => {
 								name: pokemon.name,
 								number: data.id,
 								type: data.types[0]?.type?.name || "",
+                                type2: data.types[1]?.type?.name || "",
 								image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${data.id}.gif`,
 							};
 						} else {
