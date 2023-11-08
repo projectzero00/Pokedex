@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokedex</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>Home</li>
+					<li>Pokedex</li>
+					<li>Videogames</li>
+					<li>GCC Pokemon</li>
+					<li>TV Pokemon</li>
+					<li>Play! Pokemon</li>
+					<li>News</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section id="search-pokemon-container">
+				<div>
+					<div id="search-pokemon-div">
+						<input
+							type="text"
+							name=""
+							id="search-pokemon-input"
+							placeholder="Search your Pokemon!"
+							required
+						/>
+						<button id="search-pokemon-button">
+							<img src="./Icons/ball.png" alt="" />
+						</button>
+					</div>
+
+					<!-- <div>
+						<select name="" id="">
+							<option value="">Ascending</option>
+							<option value="">Descending</option>
+						</select>
+					</div>
+					<div>
+						<select name="" id="">
+							<option value="" disabled selected>Type</option>
+						</select>
+						<select name="" id="">
+							<option value="" disabled selected>Weaknesses</option>
+						</select>
+						<select name="" id="">
+							<option value="" disabled selected>Ability</option>
+						</select>
+						<select name="" id="">
+							<option value="" disabled selected>Height</option>
+						</select>
+						<select name="" id="">
+							<option value="" disabled selected>Weight</option>
+						</select>
+					</div> -->
+				</div>
+				<div class="search-result">
+				</div>
+			</section>
+
+			<aside id="poke-info">
+				<div></div>
+			</aside>
+		</main>
+
+		<script type="module" src="script.js"></script>
+	</body>
+</html>
