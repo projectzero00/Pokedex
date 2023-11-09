@@ -141,20 +141,9 @@ main {
 
 #filter-pokemon-div {
 	display: flex;
-	justify-content: space-between;
+	justify-content: end;
 	align-items: center;
 	margin-bottom: 30px;
-}
-
-#order-filter {
-	width: 200px;
-	height: 40px;
-	font-size: 16px;
-	font-weight: 600;
-	color: rgb(0, 0, 0);
-	border: none;
-	border-radius: 10px;
-	outline: none;
 }
 
 #filter-span > label {
@@ -326,7 +315,6 @@ main {
 .hidden {
 	display: none;
 }
-
 
 #poke-info {
 	background-color: white;

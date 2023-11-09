@@ -1,5 +1,8 @@
 export const fetchAPI = async () => {
-	const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
+	const startNumber = document.querySelector("#start-number").value;
+	const correctNumber = startNumber - 1;
+	const endNumber = document.querySelector("#end-number").value;
+	const url = `https://pokeapi.co/api/v2/pokemon?limit=${endNumber - correctNumber}&offset=${correctNumber}`;
 	const response = await fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
