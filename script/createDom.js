@@ -1,7 +1,9 @@
 import { getPokemons } from "./fetchApi.js";
+import { createDomAside } from "./asideDom.js";
 
 const searchResult = document.querySelector(".search-result");
 const searchButton = document.querySelector("#search-pokemon-button");
+
 const createDom = (pokemon) => {
 	const fragment = document.createDocumentFragment();
 	const pokemonContainer = document.createElement("div");
@@ -21,21 +23,21 @@ const createDom = (pokemon) => {
 	nameElement.classList.add("pokemon-name");
 	nameElement.textContent = pokemon.name;
 
-    const typediv = document.createElement("div");
-    typediv.classList.add("typediv");
+	const typediv = document.createElement("div");
+	typediv.classList.add("typediv");
 	const typeElement = document.createElement("p");
 	typeElement.classList.add("pokemon-type");
-	typeElement.classList.add(`${pokemon.type}-type`);
+	typeElement.classList.add(`${pokemon.type}`);
 	typeElement.textContent = pokemon.type.toUpperCase();
-    typediv.appendChild(typeElement);
+	typediv.appendChild(typeElement);
 
-    if (pokemon.type2) {
-        const typeElement2 = document.createElement("p");
-        typeElement2.classList.add("pokemon-type");
-        typeElement2.classList.add(`${pokemon.type2}-type`);
-        typeElement2.textContent = pokemon.type2.toUpperCase();
-        typediv.appendChild(typeElement2);
-    }
+	if (pokemon.type2) {
+		const typeElement2 = document.createElement("p");
+		typeElement2.classList.add("pokemon-type");
+		typeElement2.classList.add(`${pokemon.type2}`);
+		typeElement2.textContent = pokemon.type2.toUpperCase();
+		typediv.appendChild(typeElement2);
+	}
 
 	pokemonElement.appendChild(imgElement);
 	pokemonElement.appendChild(numberElement);
@@ -45,6 +47,15 @@ const createDom = (pokemon) => {
 	pokemonContainer.appendChild(pokemonElement);
 	fragment.appendChild(pokemonContainer);
 	searchResult.appendChild(fragment);
+
+	pokemonElement.addEventListener("click", async () => {
+		const pokemons = await getPokemons();
+		pokemons.forEach((pokemon) => {
+			if (pokemon.name == nameElement.textContent) {
+				createDomAside(pokemon);
+			}
+		});
+	});
 };
 
 export const displayPokemons = async () => {
@@ -56,8 +67,6 @@ export const displayPokemons = async () => {
 };
 
 searchButton.addEventListener("click", async (e) => {
-	
-
 	searchResult.innerHTML = "";
 	const searchInput = document.querySelector("#search-pokemon-input").value;
 	const pokemons = await getPokemons();

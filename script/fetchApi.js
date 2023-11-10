@@ -2,7 +2,9 @@ export const fetchAPI = async () => {
 	const startNumber = document.querySelector("#start-number").value;
 	const correctNumber = startNumber - 1;
 	const endNumber = document.querySelector("#end-number").value;
-	const url = `https://pokeapi.co/api/v2/pokemon?limit=${endNumber - correctNumber}&offset=${correctNumber}`;
+	const url = `https://pokeapi.co/api/v2/pokemon?limit=${
+		endNumber - correctNumber
+	}&offset=${correctNumber}`;
 	const response = await fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
@@ -32,13 +34,11 @@ export const getPokemons = async () => {
 								name: pokemon.name,
 								number: data.id,
 								type: data.types[0]?.type?.name || "",
-                                type2: data.types[1]?.type?.name || "",
-								stats: data.stats,
+								type2: data.types[1]?.type?.name || "",
 								ability1: data.abilities[0]?.ability?.name || "",
 								ability2: data.abilities[1]?.ability?.name || "",
 								weight: data.weight,
 								height: data.height,
-								weak: data.weaknesses,
 								xp: data.base_experience,
 								hp: data.stats[0].base_stat,
 								attack: data.stats[1].base_stat,
@@ -47,6 +47,7 @@ export const getPokemons = async () => {
 								specialDefense: data.stats[4].base_stat,
 								speed: data.stats[5].base_stat,
 								image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${data.id}.gif`,
+								staticImage: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`,
 							};
 						} else {
 							throw new Error("Error fetching data");
@@ -65,5 +66,3 @@ export const getPokemons = async () => {
 		return null;
 	}
 };
-
-
