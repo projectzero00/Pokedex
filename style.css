@@ -204,6 +204,8 @@ main {
 	margin-left: 10px;
 }
 
+/* POKEMON INFO ASIDE  */
+
 #poke-info {
 	background: none;
 	width: 370px;
@@ -223,6 +225,11 @@ main {
 	box-shadow: 2px 2px 30px rgba(136, 136, 136, 0.2);
 }
 
+#poke-info-section > .typediv{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #poke-info-section > figure > img {
 	width: 150px;
 	height: 150px;
@@ -240,25 +247,12 @@ main {
 	margin-top: 5px;
 }
 
-.aside-poke-title {
-	font-size: 12px;
-	font-weight: 400;
-	color: #727274;
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
 .aside-title {
 	font-size: 18px;
 	font-weight: 600;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: center;
-}
-
-.aside-poke-description {
-	font-size: 14px;
-	font-weight: 400;
 }
 
 .abilities-div {

@@ -9,8 +9,8 @@ export const createDomAside = (pokemon) => {
 					<p class="aside-number">#${pokemon.number}</p>
 					<h3 class="aside-name">${pokemon.name}</h3>
 					<div class="typediv">
-						<p class="pokemon-type ${pokemon.type}-type">${pokemon.type}</p>
-						<p class="pokemon-type ${pokemon.type2}-type">${pokemon.type2}</p>
+						<p class="pokemon-type ${pokemon.type}">${pokemon.type}</p>
+						<p class="pokemon-type ${pokemon.type2}">${pokemon.type2}</p>
 					</div>
 					<h4 class="aside-title">ABILITIES</h4>
 					<div class="abilities-div">
@@ -44,7 +44,7 @@ export const createDomAside = (pokemon) => {
 						<span class="stats"><p class="stats-icon spa">SpA</p>${pokemon.specialAttack}</span>
 						<span class="stats"><p class="stats-icon spd">SpD</p>${pokemon.specialDefense}</span>
 						<span class="stats"><p class="stats-icon speed">SPD</p>${pokemon.speed}</span>
-						<span class="stats"><p class="stats-icon tot">TOT</p>555</span>		
+						<span class="stats"><p class="stats-icon tot">TOT</p>${pokemon.hp + pokemon.attack + pokemon.defense + pokemon.specialAttack + pokemon.specialDefense + pokemon.speed}</span>		
 					</div>`;
 
     const weakDom = () => {
