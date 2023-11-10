@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pokedex</title>
 		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="./Icons/icons.css">
+		<link rel="stylesheet" href="./Icons/icons.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav id="navbar">
 				<ul>
 					<li>Home</li>
 					<li>Pokedex</li>
@@ -20,6 +20,25 @@
 					<li>Play! Pokemon</li>
 					<li>News</li>
 				</ul>
+			</nav>
+
+			<nav id="menu-nav">
+				<div id="menuToggle">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+					<ul id="menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Pokedex</a></li>
+						<li><a href="#">Videogames</a></li>
+						<li><a href="#">GCC Pokemon</a></li>
+						<li><a href="#">TV Pokemon</a></li>
+						<li><a href="#">Play! Pokemon</a></li>
+						<li><a href="#">News</a></li>
+					</ul>
+				</div>
+				<h2 class="mobile-title">POKEHUB</h2>
 			</nav>
 		</header>
 
@@ -32,8 +51,7 @@
 							name=""
 							id="search-pokemon-input"
 							placeholder="Search your Pokèmon!"
-							required
-						/>
+							required />
 						<button id="search-pokemon-button">
 							<img src="./Icons/ball.png" alt="" />
 						</button>
@@ -47,15 +65,13 @@
 								id="start-number"
 								class="input-number"
 								value="1"
-								min="1"
-							/>
+								min="1" />
 							<label>to</label>
 							<input
 								type="number"
 								id="end-number"
 								class="input-number"
-								value="100"
-							/>
+								value="100" />
 						</span>
 					</div>
 				</div>
