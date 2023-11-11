@@ -125,6 +125,10 @@
 
 @media screen and (max-width: 768px) {
 
+	#poke-info-section {
+		height: 640px;
+	}
+
 	.abilities-div {
 		flex-direction: column;
 		align-items: center;
