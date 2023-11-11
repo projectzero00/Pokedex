@@ -5,13 +5,15 @@ const pokedexButton = document.querySelector("#pokedex-button");
 const home = document.querySelector("#home");
 const pokedex = document.querySelector("#pokedexlayout");
 const startButton = document.querySelector("#start-button");
+const navWip = document.querySelectorAll(".wip-page");
+const wipPage = document.querySelector("#wip");
 const addClassOnClick = () => {
-	navLinks.forEach((navLink) => {
-		navLink.addEventListener("click", () => {
-			navLinks.forEach((navLink) => {
-				navLink.classList.remove("selected");
+	navLinks.forEach((link) => {
+		link.addEventListener("click", () => {
+			navLinks.forEach((link) => {
+				link.classList.remove("selected");
 			});
-			navLink.classList.add("selected");
+			link.classList.add("selected");
 		});
 	});
 };
@@ -20,11 +22,13 @@ displayPokemons();
 pokedexButton.addEventListener("click", () => {
 	home.style.display = "none";
 	pokedex.style.display = "flex";
+    wipPage.style.display = "none";
 });
 
 homeButton.addEventListener("click", () => {
 	home.style.display = "flex";
 	pokedex.style.display = "none";
+    wipPage.style.display = "none";
 });
 
 startButton.addEventListener("click", () => {
@@ -32,4 +36,13 @@ startButton.addEventListener("click", () => {
 	pokedex.style.display = "flex";
 	homeButton.classList.remove("selected");
 	pokedexButton.classList.add("selected");
+});
+
+
+navWip.forEach((page) => {
+	page.addEventListener("click", () => {
+		home.style.display = "none";
+		pokedex.style.display = "none";
+        wipPage.style.display = "flex";
+	});
 });
