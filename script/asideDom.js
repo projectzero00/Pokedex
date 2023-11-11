@@ -52,7 +52,7 @@ export const createDomAside = (pokemon) => {
         weakness[pokemon.type].forEach((weak) => {
             pokemonWeak.innerHTML += `
             <div class="icon ${weak}">
-			    <img src="icons/types-icons/${weak}.svg" />
+			    <img src="icons/types-icons/${weak}.png" />
 			</div>`;
         })
     }
