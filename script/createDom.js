@@ -72,7 +72,6 @@ searchButton.addEventListener("click", async (e) => {
 	const pokemons = await getPokemons();
 	pokemons.forEach((pokemon) => {
 		if (pokemon.name.includes(searchInput)) {
-			console.log(pokemon);
 			createDom(pokemon);
 		}
 	});

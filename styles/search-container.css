@@ -42,8 +42,8 @@ body {
 	font-family: "Fira Sans", sans-serif;
 }
 
-main {
-	display: flex;
+#pokedexlayout {
+	display: none;
 	justify-content: space-between;
 	width: 70%;
 	height: 100%;
