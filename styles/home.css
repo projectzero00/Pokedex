@@ -57,3 +57,46 @@
     filter: drop-shadow(20px 10px 20px black);
 }
 
+@media screen and (max-width: 1024px) {
+    #home > img {
+        width: 200px;
+        height: 300px;
+        filter: drop-shadow(10px 5px 10px black);
+    }
+
+    #home-text > h1 {
+        font-size: 30px;
+    }
+
+    #home-text > h2 {
+        font-size: 20px;
+    }
+
+    #start-button {
+        font-size: 14px;
+    }
+
+    #home {
+        height: 40vh;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    #home > img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #home-text {
+        text-align: center;
+    }
+    
+    #home-text > h1 {
+        font-size: 20px;
+    }
+    
+}
+

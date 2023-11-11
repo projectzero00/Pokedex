@@ -35,14 +35,6 @@
 
 /* mobile */
 
-.mobile-title {
-	display: none;
-	color: red;
-	font-size: 24px;
-	font-weight: 800;
-	margin: auto;
-}
-
 #menu-nav {
 	display: none;
 	background-color: white;
@@ -149,41 +141,10 @@
 
 /* responsive */
 
-@media screen and (max-width: 1700px) {
-	#search-pokemon-container {
-		width: 700px;
-	}
-
-	.search-result {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	#filter-pokemon-div {
-		justify-content: center;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.search-result {
-		grid-template-columns: repeat(1, 1fr);
-	}
-
-	#search-pokemon-container {
-		width: 500px;
-	}
-}
-
 @media screen and (max-width: 1024px) {
-	#search-pokemon-container {
-		width: 300px;
-	}
 
 	#menu-nav {
 		display: flex;
-	}
-
-	.mobile-title {
-		display: block;
 	}
 
 	#navbar {
@@ -191,24 +152,3 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
-	main {
-		width: 100%;
-		justify-content: space-evenly;
-	}
-
-	#search-pokemon-container {
-		width: 250px;
-	}
-
-	#filter-span {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.abilities-div {
-		flex-direction: column;
-		align-items: center;
-	}
-}
