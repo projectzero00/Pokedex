@@ -37,11 +37,13 @@ homeButton.forEach((button) => {
 });
 
 startButton.addEventListener("click", () => {
+	const desktopHome = document.querySelector("#desktop-home");
+	const desktopPokedex = document.querySelector("#desktop-pokedex");
 	home.style.display = "none";
 	pokedex.style.display = "flex";
-	if(window.innerWidth > 1024){
-		homeButton.classList.remove("selected");
-		pokedexButton.classList.add("selected");
+	if (window.innerWidth > 1024) {
+		desktopHome.classList.remove("selected");
+		desktopPokedex.classList.add("selected");
 	}
 });
 
